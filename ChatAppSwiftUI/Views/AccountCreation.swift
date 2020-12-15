@@ -17,7 +17,6 @@ struct AccountCreation : View {
     @State var loading = false
     @State var imagedata : Data = .init(count: 0)
     @State var alert = false
-    var userImage = UIImage(named: "user")
     @State private var sourceType: UIImagePickerController.SourceType = .photoLibrary
     
     var body : some View{
@@ -41,7 +40,7 @@ struct AccountCreation : View {
                        Image(systemName: "person.crop.circle.badge.plus").resizable().frame(width: 90, height: 70).foregroundColor(.gray)
                     }
                     else{
-                        
+
                         Image(uiImage: UIImage(data: self.imagedata)!).resizable().renderingMode(.original).frame(width: 90, height: 90).clipShape(Circle())
                     }
                     
@@ -95,7 +94,7 @@ struct AccountCreation : View {
                     if self.name != "" && self.about != ""{
                         
                         self.loading.toggle()
-                        createUser(name: self.name, about: self.about, imagedata: (self.userImage?.pngData())!) { (status) in
+                        createUser(name: self.name, about: self.about, imagedata:self.imagedata) { (status) in
                             
                             if status{
                                 
@@ -124,12 +123,9 @@ struct AccountCreation : View {
         .padding()
         .sheet(isPresented: self.$picker, content: {
             
-//            ImagePicker(sourceType: .photoLibrary) { image in
-//                self.imagedata = image.jpegData(compressionQuality: 0.45)!
-//            }
-//            
             ImagePicker(selectedImage: self.$imagedata, sourceType: self.sourceType)
 //            ImagePicker(picker: self.$picker, imagedata: self.$imagedata)
+            
         })
         .alert(isPresented: self.$alert) {
             
@@ -137,12 +133,3 @@ struct AccountCreation : View {
         }
     }
 }
-
-
-
-
-//struct AccountCreation_Previews: PreviewProvider {
-//    static var previews: some View {
-//        AccountCreation()
-//    }
-//}
