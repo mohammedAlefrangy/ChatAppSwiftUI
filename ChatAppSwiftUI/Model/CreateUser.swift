@@ -32,7 +32,7 @@ func createUser(name: String,about : String,imagedata : Data,completion : @escap
                 return
             }
             
-            db.collection("users").document(uid!).setData(["name":name,"about":about,"pic":"(url!)","uid":uid!]) { (err) in
+            db.collection("users").document(uid!).setData(["name":name,"about":about,"pic":"\(url!)","uid":uid!]) { (err) in
                 
                 if err != nil{
                     
@@ -48,7 +48,7 @@ func createUser(name: String,about : String,imagedata : Data,completion : @escap
                 
                 UserDefaults.standard.set(uid, forKey: "UID")
                 
-                UserDefaults.standard.set("(url!)", forKey: "pic")
+                UserDefaults.standard.set("\(url!)", forKey: "pic")
                 
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                     
