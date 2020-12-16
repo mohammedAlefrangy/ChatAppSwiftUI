@@ -5,9 +5,9 @@ Chat App is a real-time messaging app written in SwiftUI language for iOS device
 Real Time Chat App With Firebase Authentication And Cloud Firestore Using SwiftUI.
 
 **You can see the ScreenShot for this app here [Login!](https://drive.google.com/file/d/16rr3ZT5b-1HY5NpIRJE34OMi9Rj_EBwe/view?usp=sharing)**
-**[History!](https://drive.google.com/file/d/1kExhD9r2tqorCNUyZHMpNCuS8mtfkBaJ/view?usp=sharing)**
-**[Select Chat!](https://drive.google.com/file/d/16NWR0hyaSrJmi9B1glRhv8OC2C-ogFsy/view?usp=sharing)**
-**[Select Chat!](https://drive.google.com/file/d/1p_GGUHdVEJnTayqjoPRBgj8oc1MxG_As/view?usp=sharing)**
+**[& History!](https://drive.google.com/file/d/1kExhD9r2tqorCNUyZHMpNCuS8mtfkBaJ/view?usp=sharing)**
+**[& Select Chat!](https://drive.google.com/file/d/16NWR0hyaSrJmi9B1glRhv8OC2C-ogFsy/view?usp=sharing)**
+**[& Chat!](https://drive.google.com/file/d/1p_GGUHdVEJnTayqjoPRBgj8oc1MxG_As/view?usp=sharing)**
 
 
 **Requirements**
